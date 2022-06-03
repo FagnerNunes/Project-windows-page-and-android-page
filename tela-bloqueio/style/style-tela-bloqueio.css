@@ -1,0 +1,139 @@
+.tela-bloqueio {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url(../../images/bg-tela-bloqueio-windows.jpg);
+    background-repeat: no-repeat;
+    background-position: 20% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela-bloqueio .container-bloqueio {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: .9rem;
+}
+
+.tela-bloqueio .container-bloqueio h1 {
+    color: #fafafa;
+    letter-spacing: 1px;
+}
+
+.tela-bloqueio .container-bloqueio .img {
+    width: 6rem;
+    height: 7rem;
+    background-image: url(../icones/icon-usuario-tela-bloqueio.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: invert(90%);
+}
+
+.container-bloqueio .login {
+    margin-left: .3rem;
+    display: flex;
+    align-items: flex-end;
+    gap: .5rem;
+    padding: .2rem;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    box-shadow: 1px 1px 5px #000;
+}  
+
+.container-bloqueio .login input {
+    outline: none;
+    border: 0;
+    padding: 0 .7rem .6rem .4rem;
+    background-color: #f1f1f1;
+}  
+
+::placeholder {
+    font-size: .9rem;
+}
+
+.container-bloqueio .login button {
+    width: 30px;
+    height: 35px;
+    border: none;
+    background: none;
+    background-image: url(../icones/icon-seta-entrar.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}  
+
+.tela-bloqueio.animacao-desb {
+    animation: desbloquear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes desbloquear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+footer.animacao-entrar {
+    animation: animacao-footer;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animacao-footer {
+    from {
+        opacity: 0;
+
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container-bloqueio #info {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f1f1f1;
+}
+
+.container-bloqueio .carregando {
+    width: 20px;
+    opacity: 0;
+    filter: invert(90%);
+}
+
+.tela-bloqueio .desligar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1.5rem;
+    display: flex;
+}
+
+.tela-bloqueio .desligar div {
+    padding: .5rem;
+}
+
+.tela-bloqueio .desligar div img {
+    width: 32px;
+    height: 32px;
+    margin-inline: .4rem;
+    filter: invert(90%);
+}
+
+.tela-bloqueio .desligar div:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}

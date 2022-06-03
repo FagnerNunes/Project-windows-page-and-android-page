@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.lixeira-aberta .header-lixeira {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.850);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lixeira-aberta .titulo, .lixeira-aberta .botoes {
+    display: flex;
+    align-items: center;
+}
+
+.lixeira-aberta .titulo {
+    margin-left: 1rem;
+}
+
+.header-lixeira .titulo p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+    margin-left: 1rem;
+    position: relative;
+}
+
+.header-lixeira .titulo p::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 16px;
+    left: -10px;
+    background-color: rgba(245, 245, 245, 0.87);
+}
+
+.header-lixeira .botoes button {
+    border: none;
+    background: none;
+}
+
+.header-lixeira .botoes .minimizar,
+.header-lixeira .botoes .maximinizar,
+.header-lixeira .botoes .fechar {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: invert(100%);
+}
+
+.botoes .bt-min {
+    padding: .6rem;
+}
+
+.botoes .bt-max {
+    padding: .88rem;
+}
+
+.botoes .bt-min:hover, .botoes .bt-max:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.botoes .bt-fec {
+    padding: .6rem;
+}
+
+.botoes .bt-fec:hover {
+    background-color: rgba(255, 48, 48, 0.7);
+}
+
+
+
+.header-lixeira div .minimizar {
+    width: 24px;
+    height: 24px;
+    background-image: url(../icones/icon-minimizar.png);
+}
+
+.header-lixeira div .maximinizar {
+    width: 14px;
+    height: 14px;
+    background-image: url(../icones/icon-maximinizar.png);
+}
+
+.header-lixeira div .fechar {
+    width: 24px;
+    height: 24px;
+    background-image: url(../icones/icon-fechar.png);
+}
+
+.header-lixeira div .logo-lixeira {
+    width: 25px;
+    height: 25px;
+    background-image: url(../icones/lixeira-cheia.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: .2rem;
+}
+
+.body-lixeira {
+    margin-top: 1rem;
+    padding-inline: 3rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.body-lixeira .titulo-itens {
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem 0;
+    padding-inline: .5rem;
+    margin-left: 2px;
+    color: rgb(223, 223, 223);
+    border: 1px solid rgba(243, 243, 243, 0.74);
+}
+
+.body-lixeira .itens-lixeira {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: .8rem;
+}
+
+.body-lixeira .itens-lixeira ul {
+    list-style-type: none;
+    position: relative;
+}
+
+.body-lixeira .itens-lixeira .itens::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 120px;
+    left: -10px;
+    background-color: rgba(245, 245, 245, 0.87);
+}
+
+.body-lixeira .itens-lixeira ul li {
+    padding: .3rem;
+    font-size: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+.body-lixeira .itens-lixeira .itens li:hover {
+    width: 300%;
+    background-color: rgb(255, 255, 255, 0.2);
+    cursor: default;
+}
+
+.body-lixeira .itens-lixeira .datas li {
+    padding: .45rem;
+    font-size: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+/** Lixeira na barra de tarefas **/
+.lixeira-menu-iniciar {
+    padding: .5rem .7rem;
+    border-bottom: 2px solid #53c0ff;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 5s;
+    display: none;
+}
+
+.lixeira-menu-iniciar div {
+    width: 26px;
+    height: 26px;
+    background-image: url(../icones/lixeira-cheia.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.lixeira-aberta {
+    position: fixed;
+    background-color: rgba(15, 15, 15);
+    display: none;
+    opacity: 0;
+}
+
+
+.lixeira-aberta.animar {
+    animation-name: animar;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    display: block;
+}
+
+@keyframes animar {
+    from {
+        bottom: 0px;
+        left: 150px;
+    }
+    to {
+        width: 480px;
+        height: 400px;
+        opacity: 1;
+        bottom: 14rem;
+        left: 28rem;
+    }
+}
+
+.lixeira-aberta.lixeira-max {
+    animation: animar3;
+    animation-fill-mode: forwards;
+    animation-name: .2s;
+}
+
+@keyframes animar3 {
+    from {
+    }
+    to {
+        opacity: 1;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+    }
+}

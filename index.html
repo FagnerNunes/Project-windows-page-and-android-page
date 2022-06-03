@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style-padrao-windows.css">
+    <link rel="stylesheet" type="text/css" href="Lixeira/style/style-lixeira.css">
+    <link rel="stylesheet" type="text/css" href="Explorador-arquivos/style/style-exp-arquivo.css">
+    <link rel="stylesheet" type="text/css" href="tela-bloqueio/style/style-tela-bloqueio.css">
+    <link rel="stylesheet" type="text/css" href="iniciar/style/style-iniciar.css">
+    <link rel="stylesheet" type="text/css" href="mobile/mob-style/style-mobile.css">
+    <title>Windows 10</title>
+</head>
+<body>
+
+    <main> <!-- Main container windows -->
+        <!-- TELA DE BLOQUEIO -->
+        <div class="tela-bloqueio">
+            <div class="container-bloqueio">
+                <div class="img"></div>
+                <h1>Fagner Nunes</h1>
+                <div class="login">
+                    <input type="password" id="senha" placeholder="Senha" size="23" maxlength="5">
+                    <button type="submit" onclick="entrar()"></button>
+                </div>
+                <p id="info"></p>
+                <img class="carregando" src="tela-bloqueio/icones/icon-carregando.gif">
+            </div>
+
+            <div class="desligar">
+                <div>
+                    <img src="tela-bloqueio/icones/icon-conectado-internet.png">
+                </div>
+            <div>
+                    <img src="tela-bloqueio/icones/icons-desligar.png">
+            </div>
+            </div>
+        </div>
+
+
+        <!-- ITENS AREA DE TRABALHO -->
+        <div class="itens-area-trabalho">
+            <div class="lixeira" ondblclick="abrirLixeira()">
+                <div></div>
+                <p>Lixeira</p>
+            </div>
+        
+            <div class="edge-area-t">
+                <div></div>
+                <p>Microsoft Edge</p>
+            </div>
+        
+            <div class="chrome-area-t">
+                <div></div>
+                <p>Google</p>
+            </div>
+        
+            <div class="vscode-area-t">
+                <div></div>
+                <p>Visual Studio Code</p>
+            </div>   
+        </div> 
+
+
+        <!-- INICIAR ABERTO -->
+        <div class="container-iniciar">
+            <div class="menu-iniciar-aberto">
+                <div class="left-iniciar">
+                    <div class="left-a">
+                        <div></div>
+                        <h3>INICIAR</h3>
+                    </div>
+        
+                    <div class="left-b">
+                        <div class="avatar">
+                            <div></div>
+                            <p>Fagner Nunes</p>
+                        </div>
+                        
+                        <div class="docs">
+                            <div></div>
+                            <p>Documentos</p>
+                        </div>
+            
+                        <div class="imgs">
+                            <div></div>
+                            <p>Imagens</p>
+                        </div>
+            
+                        <div class="configs">
+                            <div></div>
+                            <p>Configurações</p>
+                        </div>
+            
+                        <div class="desligar-ligar">
+                            <div></div>
+                            <p>Ligar/Desligar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="adicionados-recentemente">
+                <div class="lista-adicionados">
+                    <h2>Adicionados recentemente</h2>
+                    <div class="itens">
+                        <div class="itens-recente">
+                            <p><img src="iniciar/icones/icon-exp-arquivos.png" width="20px">Explorador de arquivos</p>
+                            <p><img src="iniciar/icones/lixeira-cheia.png" width="20px">Lixeira</p>
+                        </div>
+
+                        <div class="sugestoes">
+                            <div>
+                                <h2>C</h2>
+                                <p><img src="iniciar/icones/icon-cortana.png" width="20px">Cortana</p>
+                            </div>
+
+                            <div>
+                                <h2>G</h2>
+                                <p><img src="iniciar/icones/icon-chrome.png" width="20px">Google</p>
+                            </div>
+        
+                            <div>
+                                <h2>L</h2>
+                                <p><img src="iniciar/icones/lixeira-cheia.png" width="20px">Lixeira</p>
+                            </div>
+        
+                            <div>
+                                <h2>M</h2>
+                                <p><img src="iniciar/icones/icon-microsoft-edge.png" width="20px">Microsoft Edge</p>
+                            </div>
+
+                            <div>
+                                <h2>V</h2>
+                                <p><img src="iniciar/icones/icon-vs-code.png" width="20px">Visual Studio Code</p>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="produtividade">
+                <div class="opcoes">
+                    <div>
+                        <h4>Apps</h4>
+                        <div class="p-1"></div>
+                        <div class="p-2"></div>
+                    </div>
+
+                    <div>
+                        <h4>Recentes</h4>
+                        <div class="p-4"></div>
+                        <div class="p-3"></div>
+                    </div>
+                </div>
+
+                <div class="opcoes">
+                    <div>
+                        <h4>Explorar</h4>
+                        <div class="p-2"></div>
+                        <div class="p-4"></div>
+                    </div>
+
+                    <div>
+                        <h4>Executar</h4>
+                        <div class="p-1"></div>
+                        <div class="p-3"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LIXEIRA -->
+        <div class="lixeira-aberta">
+            <div class="header-lixeira">
+                <div class="titulo">
+                    <div class="logo-lixeira"></div>
+                    <p>Lixeira</p>
+                </div>
+
+                <div class="botoes">
+                    <div class="bt-min" onclick="minLixeira()">
+                        <button class="minimizar"></button>
+                    </div>
+                    <div class="bt-max" onclick="maxLixeira()">
+                        <button class="maximinizar"></button>
+                    </div>
+                    <div class="bt-fec" onclick="fecharLixeira()">
+                        <button class="fechar"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body-lixeira">
+                <div class="titulo-itens">
+                    <p>Nome</p>
+                    <p>Data de exclusão</p>
+                </div>
+                
+                <div class="itens-lixeira">
+                    <ul class="itens">
+                        <li>
+                            <img src="Lixeira/icones/icon-imagem.png">
+                            Imagem1.png
+                        </li>
+                        <li>
+                            <img src="Lixeira/icones/icon-imagem.png">
+                            Imagem2.png
+                        </li>
+                        <li>
+                            <img src="Lixeira/icones/icon-imagem.png">
+                            Imagem3.png
+                        </li>
+                        <li>
+                            <img src="Lixeira/icones/icon-imagem.png">
+                            Imagem4.png
+                        </li>
+                    </ul>
+
+                    <ul class="datas">
+                        <li>20/12/2021</li>
+                        <li>16/01/2022</li>
+                        <li>14/02/2022</li>
+                        <li>03/03/2022</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- EXPLORADOR DE ARQUIVOS -->
+        <div class="exp-arquivo-aberta">
+            <div class="header-exp-arquivo">
+                <div class="titulo">
+                    <div class="logo-exp-arquivo"></div>
+                    <p>Explorador de arquivos</p>
+                </div>
+
+                <div class="botoes">
+                    <div class="bt-min" onclick="minExpArquivo()">
+                        <button class="minimizar"></button>
+                    </div>
+                    <div class="bt-max" onclick="maxExpArquivo()">
+                        <button class="maximinizar"></button>
+                    </div>
+                    <div class="bt-fec" onclick="fecharExpArquivo()">
+                        <button class="fechar"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body-exp-arquivo">
+                <div class="p-area-trabalho">
+                    <div class="img1">
+                        <div class="img2"></div>
+                    </div>
+                    <div class="titulo-pasta">
+                        <p>Área de Trabalho</p>
+                        <p class="este-computador">Este Computador</p>
+                    </div>
+                </div>
+
+                <div class="p-downloads">
+                    <div class="img1">
+                        <div class="img2"></div>
+                    </div>
+                    <div class="titulo-pasta">
+                        <p>Downloads</p>
+                        <p class="este-computador">Este Computador</p>
+                    </div>
+                </div>
+                
+                <div class="p-documentos">
+                    <div class="img1">
+                        <div class="img2"></div>
+                    </div>
+                    <div class="titulo-pasta">
+                        <p>Área de Trabalho</p>
+                        <p class="este-computador">Este Computador</p>
+                    </div>
+                </div>
+
+                <div class="p-imagens">
+                    <div class="img1">
+                        <div class="img2"></div>
+                    </div>
+                    <div class="titulo-pasta">
+                        <p>Área de Trabalho</p>
+                        <p class="este-computador">Este Computador</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer> <!-- Rodapé / Navegação Windows -->        
+            <div class="barra-tarefas">
+
+                <div class="icones-1">
+                    <div class="bt-menu-iniciar" onclick="abrirMenu()">
+                        <div></div>
+                    </div>
+            
+                    <div class="pesquisa">   
+                        <input type="search" value="" size="40" placeholder="Digite aqui para pesquisar">
+                    </div>
+            
+                    <div class="cortana">
+                        <div></div>
+                    </div>
+            
+                    <div class="visao-t">
+                        <div></div>
+                    </div>
+        
+                    <div class="edge">
+                        <div></div>
+                    </div>
+            
+                    <div class="pasta" onclick="abrirExpArquivo()">
+                        <div></div>
+                    </div>
+            
+                    <div class="vscode">
+                        <div></div>
+                    </div>
+            
+                    <div class="chrome">
+                        <div></div>
+                    </div>
+        
+                    <div class="lixeira-menu-iniciar" onclick="abrirLixeiraMenu()">
+                        <div></div>
+                    </div>  
+                </div>
+        
+                <div class="icones-2">
+                    <div class="acesso-internet">
+                        <div></div>
+                    </div>
+
+                    <div class="auto-falante">
+                        <div></div>
+                    </div>
+
+                    <div class="data-hora">
+                        <div id="hora"></div>
+                        <div id="data"></div>
+                    </div>
+
+                    <div class="botao-barra-tarefas" onclick="voltarAreaTrabalho()">
+                        <button type="button"></button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="Lixeira/script/script-lixeira.js"></script>
+        <script src="Explorador-arquivos/script/script-exp-arquivo.js"></script>
+        <script src="scripts/script-barra-tarefas.js"></script>
+        <script src="tela-bloqueio/script/script-tela-bloqueio.js"></script>
+    </main>    
+
+
+    <div class="aviso"> <!-- AVISO -->
+        <div>
+            <h3>Min width 1000px (desktop)</h3>
+        </div>
+
+        <div>
+            <h3>Max width 425px (phone)</h3>
+        </div>
+    </div>
+
+
+    <!-- MOBILE / ANDROID -->
+    <div class="mob-container" onclick="AparecerContainerSenha()">
+        <div class="container-bg"></div>
+        <div class="mob-tela-bloqueio">
+            <div class="mob-campo-senha">
+                <input type="password" id="campo-senha" size="25">
+                <div class="backspace" onclick="apagar()"></div>
+            </div>
+            <div class="botoes-senha">
+                <div class="alinha-botoes">
+                    <span onclick="btt('1')">1</span>
+                    <span onclick="btt('2')">2</span>
+                    <span onclick="btt('3')">3</span>
+                </div>
+                <div class="alinha-botoes">
+                    <span onclick="btt('4')">4</span>
+                    <span onclick="btt('5')">5</span>
+                    <span onclick="btt('6')">6</span>
+                </div>
+                <div class="alinha-botoes">
+                    <span onclick="btt('7')">7</span>
+                    <span onclick="btt('8')">8</span>
+                    <span onclick="btt('9')">9</span>
+                </div>
+                <div class="alinha-botoes">
+                    <span class="retira-botao">1</span>
+                    <span onclick="btt('0')">0</span>
+                    <div class="enviar" onclick="enviar()"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mob-home">
+            <div class="cadeado"></div>
+            
+            <div class="mob-data-hora">
+                <div id="mob-hora"></div>
+                <div id="mob-data"></div>
+            </div>
+        </div>
+
+        <div class="botoes-bottom">
+            <div class="voltar"></div>
+            <div class="home"></div>
+            <div class="mostrar-abas"></div>
+        </div>
+    </div>
+
+    <script src="mobile/mob-script/script-tela-bloqueio.js"></script>
+</body>
+</html>

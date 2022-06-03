@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.exp-arquivo-aberta .header-exp-arquivo {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.850);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exp-arquivo-aberta .titulo, .exp-arquivo-aberta .botoes {
+    display: flex;
+    align-items: center;
+}
+
+.exp-arquivo-aberta .titulo {
+    margin-left: 1rem;
+}
+
+.exp-arquivo-aberta .titulo p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+    margin-left: 1rem;
+    position: relative;
+}
+
+.exp-arquivo-aberta .titulo p::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 16px;
+    left: -10px;
+    background-color: rgba(245, 245, 245, 0.87);
+}
+
+.exp-arquivo-aberta .botoes button {
+    border: none;
+    background: none;
+}
+
+.exp-arquivo-aberta .botoes .minimizar,
+.exp-arquivo-aberta .botoes .maximinizar,
+.exp-arquivo-aberta .botoes .fechar {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: invert(100%);
+}
+
+.botoes .bt-min {
+    padding: .6rem;
+}
+
+.botoes .bt-max {
+    padding: .88rem;
+}
+
+.botoes .bt-min:hover, .botoes .bt-max:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.botoes .bt-fec {
+    padding: .6rem;
+}
+
+.botoes .bt-fec:hover {
+    background-color: rgba(255, 48, 48, 0.7);
+}
+
+.exp-arquivo-aberta div .minimizar {
+    width: 24px;
+    height: 24px;
+    background-image: url(../icones/icon-minimizar.png);
+}
+
+.exp-arquivo-aberta div .maximinizar {
+    width: 14px;
+    height: 14px;
+    background-image: url(../icones/icon-maximinizar.png);
+}
+
+.exp-arquivo-aberta div .fechar {
+    width: 24px;
+    height: 24px;
+    background-image: url(../icones/icon-fechar.png);
+}
+
+.exp-arquivo-aberta div .logo-exp-arquivo {
+    width: 23px;
+    height: 23px;
+    background-image: url(../icones/icon-exp-arquivos.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: .2rem;
+}
+
+.body-exp-arquivo {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5rem;
+    gap: .5rem;
+    position: relative;
+}
+
+.body-exp-arquivo::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 360px;
+    left: 48px;
+    background-color: rgba(245, 245, 245, 0.87);
+}
+
+.titulo-pasta {
+    width: 150px;
+    color: white;
+    cursor: default;
+}
+.este-computador {
+    color: rgba(255, 255, 255, 0.712);
+    font-size: .8rem;
+}
+
+.p-area-trabalho, .p-downloads, .p-documentos, .p-imagens {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .7rem 1rem;
+}
+
+.p-area-trabalho:hover, .p-downloads:hover, .p-documentos:hover, .p-imagens:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+    transition: .1s;
+}
+
+.p-area-trabalho .img1, .p-downloads .img1, .p-documentos .img1, .p-imagens .img1 {
+    width: 60px;
+    height: 60px;
+    background-image: url(../icones/icon-pasta-aberta.png);
+}
+
+.p-area-trabalho .img1, .p-downloads .img1, .p-documentos .img1,
+.p-imagens .img1, .p-area-trabalho .img2, .p-downloads .img2,
+.p-documentos .img2, .p-imagens .img2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+
+
+/* PASTA AREA DE TRABALHO */
+.p-area-trabalho .img2 {
+    width: 40px;
+    height: 38px;
+    background-image: url(../icones/icon-area-de-trabalho.png);
+    right: -20px;
+    bottom: -20px;
+}
+
+
+/* PASTA DOWNLOADS*/
+.p-downloads .img2 {
+    width: 30px;
+    height: 30px;
+    background-image: url(../icones/icons-downloads.png);
+    right: -26px;
+    bottom: -23px;
+}
+
+
+/* PASTA DOCUMENTOS*/
+.p-documentos .img2 {
+    width: 35px;
+    height: 35px;
+    background-image: url(../icones/icon-documentos.png);
+    right: -25px;
+    bottom: -20px;
+}
+
+
+/* PASTA IMAGENS*/
+.p-imagens .img2 {
+    width: 34px;
+    height: 34px;
+    background-image: url(../icones/icon-imagens.png);
+    right: -21px;
+    bottom: -21px;
+}
+
+
+.exp-arquivo-aberta {
+    position: fixed;
+    background-color: rgba(15, 15, 15);
+    display: none;
+    opacity: 0;
+}
+
+.exp-arquivo-aberta.animar-2 {
+    animation-name: animar2;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    display: block;
+ }
+ 
+ @keyframes animar2 {
+    from {
+        opacity: 0;
+        bottom: 0px;
+        left: 400px;
+    }
+    to {
+        opacity: 1;
+        bottom: 10.5rem;
+        left: 32rem;
+        width: 400px;
+        height: 500px;
+    }
+}
+
+.exp-arquivo-aberta.arquivo-max {
+    animation: animar4;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animar4 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+ 
+
+

@@ -1,0 +1,238 @@
+.container-iniciar {
+    width: 600px;
+    height: 580px;
+    background-color: rgba(26, 26, 26, 0.9);
+    display: none;
+    position: absolute;
+}
+
+.menu-iniciar-aberto {
+    width: 48px;
+    height: 580px;
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    background-color: rgba(26, 26, 26, 1);
+    color: #fff;
+    overflow: hidden;
+}
+
+.menu-iniciar-aberto:hover {
+    width: 300px;
+    transition: .3s;
+}
+
+.left-iniciar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 100%;
+}
+
+.left-a {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: .7rem;
+    font-size: .9rem;
+}
+
+.left-a:hover {
+    background-color: rgb(255, 255, 255, .2);
+}
+
+.left-a div {
+    width: 25px;
+    height: 20px;
+    background-image: url(../icones/icon-menu-hamburg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: invert(100%);
+}
+
+.left-b {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-b div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar, .docs, .imgs, .configs, .desligar-ligar {
+    padding: .6rem .3rem; 
+} 
+
+.avatar:hover, .docs:hover, .imgs:hover, .configs:hover, .desligar-ligar:hover {
+    background-color: rgb(255, 255, 255, .2);
+    cursor: default;
+} 
+
+.avatar div, .docs div, .imgs div, .configs div, .desligar-ligar div {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(100%);
+    margin-left: .4rem;
+}
+
+.avatar div {
+    width: 28px;
+    height: 28px;
+    background-image: url(../icones/icon-usuario.png);
+}
+
+.docs div { 
+    width: 25px;
+    height: 25px;
+    background-image: url(../icones/icon-arquivo.png);
+    margin-right: .2rem;
+}
+
+.imgs div {
+    width: 23px;
+    height: 23px;
+    background-image: url(../icones/icon-imagem.png);
+    margin-right: .4rem;
+}
+
+.configs div {
+    width: 25px;
+    height: 25px;
+    background-image: url(../icones/icon-configuracoes.png);
+    margin-right: .2rem;
+}
+
+.desligar-ligar div {
+    width: 23px;
+    height: 23px;
+    background-image: url(../icones/icons-desligar.png);
+    margin-right: .4rem;
+}
+
+
+
+/** Adicionados recentemente **/
+.adicionados-recentemente {
+    width: 270px;
+    margin-left: 50px;
+    color: #f1f1f1;
+    padding: .6rem;
+}
+
+.lista-adicionados h2 {
+    margin: .5rem .3rem;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.lista-adicionados, .lista-adicionados .itens, .lista-adicionados .sugestoes, .lista-adicionados .itens-recente {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-adicionados .itens {
+    gap: 1.6rem;
+    font-size: .98rem;
+}
+
+.lista-adicionados .itens p {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .3rem;
+}
+
+.lista-adicionados .itens p:hover {
+    background-color: rgb(255, 255, 255, .2);
+    cursor: default;
+}
+
+.lista-adicionados .itens-recente {
+    gap: .5rem;
+}
+
+.lista-adicionados .sugestoes {
+    gap: 1rem;
+    font-weight: 100;
+}
+
+.lista-adicionados .sugestoes h2 {
+    font-size: .9rem;
+    margin-left: .5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/** Produtividade (parte3) **/
+.produtividade {
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.produtividade h4 {
+    margin-left: .7rem;
+}
+
+.produtividade .opcoes {
+    display: flex;
+    gap: 1rem;
+}
+
+.p-1, .p-2, .p-3, .p-4 {
+    width: 100px;
+    height: 100px;
+    margin: .5rem;
+    border: 1px solid rgb(255, 255, 255, 0);
+}
+
+.p-1:hover, .p-2:hover, .p-3:hover, .p-4:hover {
+    box-shadow: 0px 0px 5px rgb(255, 255, 255, 0.7);
+    border: 1px solid rgb(255, 255, 255, .5);
+    border-radius: 3px;
+} 
+
+.p-1 {
+    background-color: rebeccapurple;
+}
+.p-2 {
+    background-color: orangered;
+}
+.p-3 {
+    background-color: rgb(76, 151, 0);
+}
+.p-4 {
+    background-color: rgb(168, 168, 0);
+}
+
+
+/** animação **/ 
+
+.container-iniciar.animar-menu {
+    animation-name: animacaoIniciar;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    display: flex;
+}
+
+@keyframes animacaoIniciar {
+    from {
+        left: -150px;
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        bottom: 2.9rem;
+        opacity: 1;
+    }
+} 

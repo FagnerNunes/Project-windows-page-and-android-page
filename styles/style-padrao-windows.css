@@ -1,0 +1,357 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    background-image: url(../images/bg-windows7.jpg);
+    background-size: cover;
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    background-color: none;
+}
+
+.aviso {
+    display: none;
+}
+
+.mob-container {
+    display: none;
+}
+
+footer {
+    max-width: 100vw;
+    max-height: 45px;
+    opacity: 0;
+}
+
+footer .barra-tarefas {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(26, 26, 26);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.itens-area-trabalho {
+    display: inline-block;
+}
+
+.lixeira, .edge-area-t, .chrome-area-t, .vscode-area-t {
+    display: block;
+    width: 90px;
+    margin: 1rem;
+    cursor: default;
+    border: 1px ridge #ffffff00;
+}
+
+.lixeira div, .edge-area-t div, .chrome-area-t div, .vscode-area-t div {
+    width: 2.8rem;
+    height: 2.8rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.lixeira p, .edge-area-t p, .chrome-area-t p, .vscode-area-t p {
+    color: rgb(236, 236, 236);
+    font-size: .95rem;
+    text-shadow: 0px 2px 6px #000;
+    text-align: center;
+}
+
+
+.lixeira:hover, .edge-area-t:hover, .chrome-area-t:hover, .vscode-area-t:hover {
+    background-color: rgba(132, 194, 230, 0.15);
+    border: 1px ridge #53c0ff46;
+}
+
+/** Lixeira AREA DE TRABALHO **/
+.lixeira div {
+    background-image: url(../icones-barra-tarefas/lixeira-cheia.png);
+}    
+
+/** Microsoft Edge AREA DE TRABALHO **/
+.edge-area-t div {
+    background-image: url(../icones-barra-tarefas/icon-microsoft-edge.png);
+}
+
+/** Google Chrome AREA DE TRABALHO **/
+.chrome-area-t div {
+    background-image: url(../icones-barra-tarefas/icon-chrome.png);
+}
+
+/** VS Code AREA DE TRABALHO **/
+.vscode-area-t div {
+    background-image: url(../icones-barra-tarefas/icon-vs-code.png);
+}
+
+
+
+.icones-1, .icones-2 {
+    display: flex;
+}
+
+
+/** BOTÃO MENU INICIAR **/
+
+.bt-menu-iniciar {
+    padding: .815rem .95rem;
+}
+
+.bt-menu-iniciar div {
+    width: 18px;
+    height: 18px;
+    background-image: url(../icones-barra-tarefas/icon-windows.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: brightness(360%);
+}
+
+.bt-menu-iniciar:hover div {
+    filter: brightness(130%);
+}
+
+.bt-menu-iniciar:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+.bt-menu-iniciar-hover {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+
+
+/** BOTÃO DE PESQUISA **/
+
+.pesquisa input {
+    background-color: rgba(63, 63, 63, 0.822);
+    border: 1px solid rgba(228, 228, 228, 0.295);
+    padding: .9rem 0rem;
+    outline: none;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+}
+
+.pesquisa input {
+    background-image: url(../icones-barra-tarefas/icon-search.png);
+    background-repeat: no-repeat;
+    background-position: 2% 50%;
+    background-size: 25px;
+}
+
+.pesquisa input:focus {
+    filter:invert(100%);
+    background-color: #000;
+    border: 1px solid #ff8800;
+    transition: .1s;
+}
+
+.pesquisa input::placeholder {
+    color: rgba(255, 255, 255, 0.850);
+    font-size: .95rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/** Cortana **/
+
+.cortana {
+    padding: .6rem .75rem;
+    border-bottom: 2px solid #ffffff00;
+}
+
+.cortana div {
+    width: 24px;
+    height: 24px;
+    background-image: url(../icones-barra-tarefas/icon-cortana.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.cortana:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+/** Visão de tarefas **/
+.visao-t {
+    padding: .75rem 1rem;
+    border-bottom: 2px solid #ffffff00;
+}
+
+.visao-t div {
+    width: 18px;
+    height: 18px;
+    background-image: url(../icones-barra-tarefas/icon-visao-tarefas.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: invert(100%);
+}
+
+.visao-t:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+
+/** Microsoft EDGE **/
+.edge {
+    padding: .4rem .6rem;
+    border-bottom: 2px solid #ffffff00;
+}
+
+.edge div {
+    width: 30px;
+    height: 30px;
+    background-image: url(../icones-barra-tarefas/icon-microsoft-edge.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.edge:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+
+/** Pasta **/
+.pasta {
+    padding: .55rem .77rem;
+    border-bottom: 2px solid #ffffff00;
+}
+
+.pasta div {
+    width: 25px;
+    height: 25px;
+    background-image: url(../icones-barra-tarefas/icon-exp-arquivos.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.pasta:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+
+/** VS CODE **/
+.vscode {
+    padding: .45rem .65rem;
+    border-bottom: 2px solid #ffffff00;
+}
+
+.vscode div {
+    width: 28px;
+    height: 28px;
+    background-image: url(../icones-barra-tarefas/icon-vs-code.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.vscode:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+
+/** Chrome **/
+.chrome {
+    padding: .47rem .7rem;
+    border-bottom: 2px solid #ffffff00;
+}
+
+.chrome div {
+    width: 28px;
+    height: 28px;
+    background-image: url(../icones-barra-tarefas/icon-chrome.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.chrome:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+/* Right */
+
+/* Acesso a internet */
+.acesso-internet {
+    padding: .82rem .6rem;
+}
+
+.acesso-internet:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.acesso-internet div {
+    width: 18px;
+    height: 18px;
+    background-image: url(../icones-barra-tarefas/icons8-conexão-de-rede-com-fio-50.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: invert(100%);
+}
+
+/* Auto falantes */
+.auto-falante {
+    padding: .82rem .6rem;
+}
+
+.auto-falante:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.auto-falante div {
+    width: 20px;
+    height: 20px;
+    background-image: url(../icones-barra-tarefas/icon-auto-falante.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: invert(100%);
+}
+
+/* DATA E HORA */
+.data-hora {
+    text-align: center;
+    align-self: center;
+    color: rgba(255, 255, 255, 0.774);
+    font-size: .9rem;
+    padding: .38rem .2rem;
+    margin-right: .2rem;
+    cursor: default;
+    letter-spacing: .05rem;
+}
+
+.data-hora:hover {
+    background-color: rgba(126, 126, 126, 0.178);
+}
+
+/* Botao barra tarefas para minimizar tudo */
+.botao-barra-tarefas:hover {
+    background-color: rgba(126, 126, 126, 0.178);
+}
+.botao-barra-tarefas button {
+    width: 1px;
+    height: 42px;
+    background-color: rgba(255, 255, 255, 0.445);
+    border: none;
+    margin-right: .3rem;
+}
+
+/** ESCONDER android-MOBILE  **/
+
+.mob-container {
+    display: none;
+}
