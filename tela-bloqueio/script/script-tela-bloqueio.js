@@ -2,7 +2,7 @@ function entrar() {
     let bloqueio = document.querySelector(".tela-bloqueio");
     let senhaEntrar = document.querySelector("#senha").value;
     let info = document.querySelector("#info");
-    let senha = "1409";
+    let senha = "12345";
 
     if (senhaEntrar == senha){
         bloqueio.classList.add('animacao-desb');
